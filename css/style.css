@@ -5,12 +5,85 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
 a {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 ul {
     list-style: none;
+}
+.page {
+    background-color: #f1f5f9;
+    height: 100vh;
+}
+
+/*SideBar*/
+aside {
+    width: 250px;
+    box-shadow: 0 0 10px #ddd;
+}
+aside > h3 {
+    margin-bottom: 25px;
+    padding-bottom: 12.5px;
+    font-size: 1.8rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+aside > h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: black;
+}
+aside > h3::after {
+    content: "";
+    position: absolute;
+    bottom: -9.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #0075ff;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+}
+aside ul li a {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+aside ul li a:hover , aside ul li a.active {
+    background-color: #f6f6f6;
+}
+aside ul li a:hover i , aside ul li a.active i{
+    color: #0075ff;
+}
+aside ul li a i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+@media (max-width:768px) {
+    .page aside {
+        width: 58px;
+        padding: 10px;
+    }
+    aside > h3 {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    aside > h3::before , aside > h3::after {
+        display: none;
+    }
+    aside ul li a i{
+        margin: 0;
+    }
+    aside ul li a span {
+        display: none;
+    }
 }

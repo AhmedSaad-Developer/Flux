@@ -39,3 +39,8 @@
 .rad-6 {
     border-radius: 6px;
 }
+
+/*Animations & Transitions*/
+.transition {
+    transition: 0.3s;
+}
